@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Example_Android</string>
+    <string name="title">Thông tin sinh viên</string>
+    <string name="tv_name">Họ tên:</string>
+    <string name="tv_age">Tuổi:</string>
+    <string name="tv_address">Địa chỉ:</string>
+    <string name="tv_delete">Xóa khỏi danh sách</string>
+    <string name="tv_cancel">Hủy</string>
+    <string name="toast_delete">Đã xóa khỏi danh sách</string>
+</resources>
