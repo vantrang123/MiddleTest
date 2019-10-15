@@ -1,6 +1,7 @@
 package com.trangdv.example_android.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -90,6 +91,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                     return false;
                 }
             });
+
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.dispatchToDetail(getLayoutPosition());
+                    iD = getLayoutPosition();
+                }
+            });
         }
 
     }
@@ -100,5 +109,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     interface ItemListener {
         void dialogConfirmDelete(Context context, int id);
+        void dispatchToDetail(int id);
     }
+
 }

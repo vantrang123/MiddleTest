@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
-    <include layout="@layout/edit_field"
+    <include layout="@layout/input_field"
         android:id="@+id/fiedl_input_info"/>
 
     <Button

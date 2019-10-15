@@ -1,6 +1,7 @@
 package com.trangdv.example_android.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -9,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -99,6 +99,13 @@ public class MainActivity extends AppCompatActivity implements RecyclerAdapter.I
     public void dialogConfirmDelete(Context context, int id) {
         DeleteDialog dialog = new DeleteDialog(context, id);
         dialog.show(getSupportFragmentManager(), "OptionItemDialog");
+    }
+
+    @Override
+    public void dispatchToDetail(int id) {
+        Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+        intent.putExtra(DetailActivity.KEY_POSITION, id);
+        startActivity(intent);
     }
 
 }
